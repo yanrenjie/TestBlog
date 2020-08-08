@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是注册</title>
+    {% load static %}
+
+    <!-- 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- 引入vuejs -->
+    <script type="text/javascript" src="{% static 'js/vue-2.5.16.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/axios-0.18.0.min.js' %}"></script>
+    <style>
+        #test {
+            padding-top:50px;
+            padding-left:100px;
+        }
+
+        .common-input {
+            margin-bottom:20px;
+            display:block;
+            width:300px;
+            height:35px;
+        }
+        .btn {
+            background:blue;
+            color:white;
+            border-color:white;
+            border-width:0;
+            width:150px;
+        }
+        .hhh {
+            display:inline;
+        }
+
+        img {
+            height:50px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+        <!-- 定义导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- 导航栏商标 -->
+            <div>
+                <a class="navbar-brand" href="./index.html">个人博客</a>
+            </div>
+        </div>
+        <div class="navbar-collapse">
+        </div>
+    </nav>
+
+    <div id="test">
+        <form action="">
+        手机号：<br>
+        <input type="text" placeholder="请输入手机号" class="common-input">
+        密码：<br>
+        <input type="password" placeholder="请输入密码"  class="common-input">
+        确认密码：<br>
+        <input type="password" placeholder="请输入确认密码" class="common-input">
+        图片验证码：<br>
+        <input type="text" placeholder="请输入图片验证码" class="common-input hhh">
+        <img src="{%static 'img/image_code.png'%}"/><br>
+        短信验证码：<br>
+        <input type="text" placeholder="请输入短信验证码" class="common-input hhh">
+        <input type="button" value="点击获取验证码"  class="common-input btn hhh">
+        <input type="submit" value="注册"  class="common-input btn">
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>
